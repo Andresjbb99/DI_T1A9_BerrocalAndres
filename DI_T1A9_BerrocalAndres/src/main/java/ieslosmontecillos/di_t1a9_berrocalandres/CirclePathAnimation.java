@@ -30,13 +30,20 @@ public class CirclePathAnimation extends Application {
 
         // Creo el PathTransition (animación)
         PathTransition pathTransition = new PathTransition();
-        pathTransition.setDuration(Duration.millis(4000)); // Duración de 4000 ms
-        pathTransition.setPath(circle);                    // Definir el círculo como ruta
-        pathTransition.setNode(rect);                      // Nodo a mover (el rectángulo)
-        pathTransition.setOrientation(OrientationType.NONE); // Sin orientación al círculo, para moverse horizontalmente
-        pathTransition.setCycleCount(PathTransition.INDEFINITE); // Ciclos infinitos
-        pathTransition.setAutoReverse(false);              // Sin invertir el movimiento
-        pathTransition.play();                             // Iniciar la animación
+        // Duración de 4000 ms
+        pathTransition.setDuration(Duration.millis(4000)); 
+        // Definir el círculo como ruta
+        pathTransition.setPath(circle); 
+        // Nodo a mover (el rectángulo)
+        pathTransition.setNode(rect);
+        // Sin orientación al círculo, para moverse horizontalmente
+        pathTransition.setOrientation(OrientationType.NONE); 
+        // Ciclos infinitos
+        pathTransition.setCycleCount(PathTransition.INDEFINITE); 
+        // Sin invertir el movimiento
+        pathTransition.setAutoReverse(false); 
+        // Inicio la animación
+        pathTransition.play();                             
 
         // Pauso la animación cuando el ratón esté pulsado sobre el círculo
         circle.setOnMousePressed((MouseEvent e) -> pathTransition.pause());
